@@ -7,12 +7,12 @@ A personalized content dashboard that aggregates news, music, movies and social 
 This is the first commit containing only the core foundation-
 
 ### What's Included:
-- ✅ Next.js 15 with React 19 setup
-- ✅ Tailwind CSS configuration
-- ✅ Redux store with persistence
-- ✅ Basic project structure
-- ✅ Environment variables template
-- ✅ ESLint and PostCSS configuration
+- Next.js 15 with React 19 setup
+- Tailwind CSS configuration
+- Redux store with persistence
+- Basic project structure
+- Environment variables template
+- ESLint and PostCSS configuration
 
 
 ## Setup
