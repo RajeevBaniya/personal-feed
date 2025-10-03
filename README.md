@@ -2,7 +2,7 @@
 
 A personalized content dashboard that aggregates news, music, movies and social posts in one place.
 
-## Current Status: Foundation Setup
+## Current Status: Setup
 
 This is the first commit containing only the core foundation-
 
