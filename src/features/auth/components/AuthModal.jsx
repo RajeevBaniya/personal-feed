@@ -3,14 +3,6 @@ import React from 'react';
 import { useSearchParams } from 'next/navigation';
 import useAuthForm from '../hooks/useAuthForm';
 
-/**
- * Modal component for authentication (sign in/sign up)
- * @param {Object} props - Component props
- * @param {boolean} props.isOpen - Whether the modal is open
- * @param {Function} props.onClose - Function to close the modal
- * @param {string} props.mode - Authentication mode ('signin' or 'signup')
- * @param {Function} props.onSwitchMode - Function to switch between signin and signup modes
- */
 export default function AuthModal({ isOpen, onClose, mode, onSwitchMode }) {
   const params = useSearchParams();
   const callbackUrl = params.get('callbackUrl') || '/feed';

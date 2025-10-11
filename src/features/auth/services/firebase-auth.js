@@ -6,27 +6,11 @@ import {
 } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 
-/**
- * Service for handling Firebase authentication operations
- */
 export const firebaseAuthService = {
-  /**
-   * Sign in a user with email and password
-   * @param {string} email - User email
-   * @param {string} password - User password
-   * @returns {Promise<UserCredential>} Firebase user credential
-   */
   login: async (email, password) => {
     return await signInWithEmailAndPassword(auth, email, password);
   },
 
-  /**
-   * Create a new user account with email and password
-   * @param {string} email - User email
-   * @param {string} password - User password
-   * @param {string} displayName - User display name
-   * @returns {Promise<void>}
-   */
   signup: async (email, password, displayName) => {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
@@ -47,17 +31,9 @@ export const firebaseAuthService = {
     }
   },
 
-  /**
-   * Sign out the current user
-   * @returns {Promise<void>}
-   */
   logout: async () => {
     return await signOut(auth);
   },
 
-  /**
-   * Get the current Firebase auth instance
-   * @returns {Auth} Firebase auth instance
-   */
   getAuth: () => auth
 };
