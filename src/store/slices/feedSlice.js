@@ -243,20 +243,6 @@ const feedSlice = createSlice({
     debugFeed: (state) => {
       if (process.env.NODE_ENV !== 'production') {
         // Debug summary (non-production only)
-        /* eslint-disable no-console */
-        console.log('🔍 Feed Debug Info:');
-        console.log('Total items:', state.items.length);
-        console.log('News items:', state.items.filter(item => item.type === 'news').length);
-        console.log('Movie items:', state.items.filter(item => item.type === 'movie').length);
-        console.log('Music items:', state.items.filter(item => item.type === 'music').length);
-        console.log('Social items:', state.items.filter(item => item.type === 'social').length);
-        const urls = state.items.map(item => item.url).filter(url => url !== '#');
-        const uniqueUrls = new Set(urls);
-        console.log('Unique URLs:', uniqueUrls.size, 'Total URLs:', urls.length);
-        const titles = state.items.map(item => item.title);
-        const uniqueTitles = new Set(titles);
-        console.log('Unique titles:', uniqueTitles.size, 'Total titles:', titles.length);
-        /* eslint-enable no-console */
       }
     },
     setPaginationLoading: (state, action) => {

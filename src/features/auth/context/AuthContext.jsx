@@ -18,19 +18,24 @@ export function AuthProvider({ children }) {
   const auth = firebaseAuthService.getAuth();
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (u) => {
-      setUser(u ?? null);
+    try {
+      const unsub = onAuthStateChanged(auth, (u) => {
+        setUser(u ?? null);
+        setLoading(false);
+        try {
+          fetch('/api/auth/session', { 
+            method: 'POST', 
+            body: JSON.stringify({ isAuth: Boolean(u) }) 
+          });
+        } catch (err) {
+          console.error('Failed to update session:', err);
+        }
+      });
+      return () => unsub();
+    } catch (err) {
+      console.error('Firebase auth error:', err);
       setLoading(false);
-      try {
-        fetch('/api/auth/session', { 
-          method: 'POST', 
-          body: JSON.stringify({ isAuth: Boolean(u) }) 
-        });
-      } catch (err) {
-        console.error('Failed to update session:', err);
-      }
-    });
-    return () => unsub();
+    }
   }, [auth]);
 
   const value = useMemo(() => ({

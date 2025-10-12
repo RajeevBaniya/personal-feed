@@ -10,8 +10,21 @@ export default function FeatureCard({ icon, title, description, gradient, bgColo
         '--tw-gradient-to': gradient.split(' ')[3]
       }}></div>
       
-      <div className={`relative ${bgColor} backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 group-hover:border-white/20 text-center`}>
-        <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${gradient} mb-4 mx-auto`}>
+      <div 
+        className={`relative backdrop-blur-xl border border-white/10 rounded-2xl p-6 h-full transition-all duration-300 group-hover:border-white/20 text-center`}
+        style={{
+          backgroundColor: bgColor === 'bg-blue-950/40' 
+            ? 'rgba(30, 58, 138, 0.4)'
+            : bgColor === 'bg-purple-950/40'
+            ? 'rgba(88, 28, 135, 0.4)'
+            : bgColor === 'bg-emerald-950/40'
+            ? 'rgba(6, 78, 59, 0.4)'
+            : bgColor === 'bg-pink-950/40'
+            ? 'rgba(131, 24, 67, 0.4)'
+            : undefined
+        }}
+      >
+        <div className="inline-flex p-3 rounded-xl border border-white/20 mb-4 mx-auto">
           <div className="text-white">{icon}</div>
         </div>
         
