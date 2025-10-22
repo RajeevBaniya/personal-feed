@@ -94,6 +94,7 @@ export default function AuthModal({ isOpen, onClose, mode, onSwitchMode }) {
             </label>
             
             <button
+              type="submit"
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:opacity-60 text-white rounded-lg px-4 py-2.5 font-medium shadow-sm transition-all"
               disabled={mode === 'signup' ? (!formData.name || !formData.email || !formData.password) : (!formData.email || !formData.password)}
             >
