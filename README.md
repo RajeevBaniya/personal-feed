@@ -9,7 +9,7 @@ A personalized content dashboard that brings together news, music, movies and so
 - **Smart search**: Find content across all sources
 - **Favorites system**: Save content for later
 - **Responsive design**: Works on all devices
-- **Dark mode**: Easy on the eyes
+- **Dark mode/ light mode**: change according to your prefernces
 
 ## Tech Stack
 
