@@ -2,6 +2,8 @@
 
 A personalized content dashboard that brings together news, music, movies and social posts in one place.
 
+- **Live**: Demo [PersonalFeed](https://personalfeed.vercel.app/)
+
 ## Features
 
 - **Multi-source content**: News, music, movies, and social posts
