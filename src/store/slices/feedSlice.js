@@ -240,7 +240,7 @@ const feedSlice = createSlice({
       state.temporaryOrder = [];
       state.hasUnsavedChanges = false;
     },
-    debugFeed: (state) => {
+    debugFeed: (_state) => {
       if (process.env.NODE_ENV !== 'production') {
         // Debug summary (non-production only)
       }

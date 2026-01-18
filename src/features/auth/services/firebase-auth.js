@@ -4,6 +4,7 @@ import {
   updateProfile, 
   signOut 
 } from 'firebase/auth';
+
 import { auth } from '@/lib/firebase';
 
 export const firebaseAuthService = {

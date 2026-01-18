@@ -1,5 +1,7 @@
-import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+
+import { useState } from 'react';
+
 import { useAuth } from '../context/AuthContext';
 
 export default function useAuthForm(mode, onSwitchMode, callbackUrl = '/feed') {

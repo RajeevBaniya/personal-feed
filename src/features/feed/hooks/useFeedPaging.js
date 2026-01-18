@@ -1,4 +1,5 @@
 import { useRef, useCallback } from 'react';
+
 import { useAppDispatch } from '@/store/hooks';
 import {
   fetchNewsContent,
